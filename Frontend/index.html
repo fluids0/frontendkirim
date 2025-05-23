@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirim Teks & Gambar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- TOMBOL TEMA -->
+  <div class="top-left-buttons">
+    <button onclick="toggleTheme()" id="themeBtn">🌙 Dark Mode</button>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-container">
+    <h2>Kirim Teks & Gambar</h2>
+    <form id="uploadForm">
+      <label for="teks">Teks:</label>
+      <textarea name="teks" id="teks" rows="4" placeholder="Masukkan teks..."></textarea>
+
+      <label for="gambar">Gambar (opsional):</label>
+      <label for="gambar" class="custom-upload">📁 Pilih Gambar</label>
+      <input type="file" name="gambar" id="gambar" accept="image/*" />
+      <span id="filename" style="display:block; margin-top:5px;"></span>
+      <input type="file" name="gambar" id="gambar" accept="image/*" />
+      <img id="previewImage" style="display: none; max-width: 100%; margin-top: 10px;" />
+      <img id="previewImage" alt="Preview gambar" />
+      <button type="button" id="hapusGambarBtn" style="display:none;">❌ Hapus Gambar</button>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <p id="status"></p>
+  </div>
+
+  <!-- WATERMARK -->
+  <div class="corner-container">
+    <div class="watermark">Projek Hayfa</div>
+    <div class="versi">Versi 1.0(AI)</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

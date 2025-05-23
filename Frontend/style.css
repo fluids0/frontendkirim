@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --form-bg: #f9f9f9;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --border-color: #ccc;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --form-bg: #2a2a2a;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+  --border-color: #444;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+textarea,
+input[type="file"] {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#status {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.top-left-buttons {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.corner-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  opacity: 0.7;
+}
+
+textarea {
+  background-color: var(--form-bg);
+  color: var(--text-color);
+  border: 1px solid #aaa;
+}
+
+input[type="file"] {
+  display: none; /* Sembunyikan aslinya */
+}
+
+/* Tombol kustom untuk upload */
+.custom-upload {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-upload:hover {
+  opacity: 0.9;
+}
+
+#previewImage {
+  display: none;
+  max-width: 200px;   /* Maksimum lebar gambar */
+  max-height: 200px;  /* Maksimum tinggi gambar */
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  object-fit: contain;
+}
